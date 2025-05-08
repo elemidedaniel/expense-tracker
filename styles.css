@@ -1,0 +1,250 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "National Park", sans-serif;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.expense-tracker {
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 600px; /* Limit max width for larger screens */
+    padding: 10px;
+}
+
+.balance {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.options {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.submit {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: darkgreen;
+}
+
+.spent h4, .income h4 {
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: -10px;
+}
+
+.amount {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.spent h3 {
+    color: red;
+}
+
+.income h3 {
+    color: green;
+}
+
+.spent, .income {
+    height: 60px;
+    flex: 1;
+    background-color: #f5f5f5;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.transaction-item {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.transaction-item.expense {
+    border-left: 5px solid red;
+    padding: 20px 7px;
+    color: red;
+}
+
+.transaction-item.income {
+    display: flex;
+    flex-direction: row;
+    padding: 0 7px;
+    border-left: 5px solid green;
+    color: green;
+}
+
+.transaction-item small {
+    font-size: 0.75rem;
+    color: gray;
+    margin-left: 10px;
+}
+
+#toggle-enter {
+    padding: 13px 15px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    background-color: goldenrod;
+    border: solid goldenrod;
+    cursor: pointer;
+}
+
+#toggle-enter:hover {
+    background-color: rgb(147, 111, 20);
+    border: solid rgb(147, 111, 20);
+}
+
+#month-dropdown {
+    padding: 5px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#month-dropdown:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.month-income {
+    color: green;
+}
+
+.month-expense {
+    color: red;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 600px) {
+    .expense-tracker {
+        width: 100%;
+        padding: 15px;
+        margin: 0 20px;
+    }
+
+    .balance {
+        display: flex;
+        margin: 0 20px 0 20p;
+    }
+
+    .amount {
+        margin: 0 20px;
+    }
+
+    .spent, .income {
+        width: 100%;
+        margin-bottom: 10px;
+        height: auto;
+    }
+
+    .transaction-item {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    input {
+        font-size: 14px;
+    }
+    .enter {
+        margin: 0 20px;
+    }
+
+    .submit {
+        font-size: 14px;
+    }
+
+    .delete-btn {
+        font-size: 12px;
+    }
+    .transactions {
+        margin: 0 20px;
+    }
+    .transaction-item.expense {
+        padding: 15px 7px;
+    }
+    
+    .transaction-item.income {
+        padding: 15px 7px;
+    }
+    .transaction-item.income {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .transaction-item.expense {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}

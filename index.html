@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Updated HTML Structure -->
+
+<section class="expense-tracker">
+    <h1>Expense Tracker</h1>
+    <div class="balance">
+        <h2>Balance: $0</h2>
+        <button id="toggle-enter">Add</button>
+    </div>
+
+    <div class="enter" style="display: none;">
+        <input type="text" placeholder="Enter Amount" />
+        <input type="text" placeholder="Description" />
+        <div class="options">
+            <label><input type="radio" name="attendance" value="in" /> Expense</label>
+            <label><input type="radio" name="attendance" value="out" /> Income</label>
+        </div>
+        <button class="submit">Add Transaction</button>
+    </div>
+
+    <div class="amount">
+        <div class="spent">
+            <h4>Expense</h4>
+            <h3>$0</h3>
+        </div>
+        <div class="income">
+            <h4>Income</h4>
+            <h3>$0</h3>
+        </div>
+    </div>
+
+    <div class="transactions">
+        <h3>Transactions</h3>
+        <select id="month-dropdown">
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select>
+        <div class="total">
+        <p class="month-income">Total Income: $0</p>
+        <p class="month-expense">Total Expense: $0</p>
+        </div>
+        <div class="transactions-list"></div>
+    </div>
+</section>
+
+
+      
+    <script src="script.js"></script>
+  </body>
+</html>
