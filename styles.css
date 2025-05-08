@@ -12,9 +12,11 @@ h1 {
 
 .expense-tracker {
     margin-bottom: 30px;
-    width: 100%;
+    width: 90%;
     max-width: 600px; /* Limit max width for larger screens */
     padding: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .balance {
@@ -133,6 +135,7 @@ label {
     background-color: goldenrod;
     border: solid goldenrod;
     cursor: pointer;
+    color: white;
 }
 
 #toggle-enter:hover {
@@ -196,6 +199,7 @@ label {
     .balance {
         display: flex;
         margin: 0 20px 0 20p;
+        justify-content: space-around;
     }
 
     .amount {
@@ -246,5 +250,9 @@ label {
         display: flex;
         flex-direction: column;
         gap: 5px;
+    }
+    .options {
+        margin: 0 20px;
+        justify-content: space-around;
     }
 }
